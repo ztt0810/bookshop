@@ -37,6 +37,19 @@
           <element id="library" level="module" name="Maven: com.alibaba:jconsole:1.8.0" module-name="bookshop" />
           <element id="library" level="module" name="Maven: com.alibaba:tools:1.8.0" module-name="bookshop" />
           <element id="library" level="project" name="Maven: com.microsoft.sqlserver:sqljdbc4:4.0" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-web:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-oxm:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context-support:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-test:5.2.7.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:5.2.7.RELEASE" />
         </element>
       </element>
     </root>
