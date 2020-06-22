@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="app.ztt.dao.CartDao">
+    <insert id="addItemToCart" parameterType="Cart">
+        SET IDENTITY_INSERT cart ON
+        insert into cart (userCode, bookId, quantity) values (#{userCode}, #{bookId}, #{quantity})
+    </insert>
+
+    <select id="findUserCartById" parameterType="integer" resultType="app.ztt.vo.CartVo">
+        select b.bookName, b.price, c.quantity from cart c, bookinfo b where c.bookId = b.bookId and userCode = #{userCode}
+    </select>
+
+    <select id="findBook" parameterType="integer" resultType="integer">
+        select quantity from cart where userCode=#{userCode} and bookId = #{bookId};
+    </select>
+
+    <update id="updateBookQuantity" parameterType="integer">
+        update cart set quantity = quantity + 1 where bookId = #{bookId}
+    </update>
+
+    <update id="minusOneItem" parameterType="integer">
+        update cart set quantity = quantity -1 where bookId = #{bookId}
+    </update>
+
+    <delete id="deleteOneItem" parameterType="integer">
+        delete cart where bookId = #{bookId}
+    </delete>
+
+    <delete id="clearUserCart" parameterType="integer">
+        delete cart where userCode = #{userCode}
+    </delete>
+</mapper>

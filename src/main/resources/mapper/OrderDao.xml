@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="app.ztt.dao.OrderDao">
+    <insert id="createOrder" parameterType="Order">
+        insert into [order] (orderId, userCode, totalPrice, orderTime, totalQuantity)
+        values (#{orderId}, #{userCode}, #{totalPrice}, #{orderTime}, #{totalQuantity})
+    </insert>
+
+    <insert id="recordOrderDetail" parameterType="OrderDetail">
+        SET IDENTITY_INSERT orderDetail ON
+        insert into orderDetail (orderId, bookId, price, quantity)
+        values (#{orderId}, #{bookId}, #{price}, #{quantity})
+    </insert>
+
+    <select id="getOrderById" parameterType="integer" resultType="Order">
+        select * from [order] where userCode = #{userCode}
+    </select>
+
+    <delete id="deleteOrder" parameterType="integer">
+        delete [order] where orderId = #{orderId}
+    </delete>
+
+    <delete id="deleteOrderDetail" parameterType="integer">
+        delete orderDetail where orderId = #{orderId}
+    </delete>
+</mapper>
