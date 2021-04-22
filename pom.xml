@@ -17,7 +17,7 @@
         <spring.version>5.2.7.RELEASE</spring.version>
 
         <!--mybatis 版本号-->
-        <mybatis.version>3.2.4</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
     </properties>
     <!--上边介绍的的版本号等等 将下面的代码放到dependencies标签中即可-->
 
